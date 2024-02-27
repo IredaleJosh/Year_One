@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+struct Maze{
+    int height;
+    int width;
+}
+
+int main(int argc, char *argv[]){
+    //Validation of arguements
+        //print: "Usage: Coursework <mazefile>" when arguement count not correct
+    //Get file from argv[1]
+        //if file is NULL print: "Error: Incorrect filename"
+
+    //If statements to move player
+        //If not WASD print "Error: Invalid Input. Use WASD"
+        //Movement for each key, 
+    
+    //Check if player has hit the wall
+        //print "Cannot move through a wall"
+        //Do not move the player
+
+    //If player reaches E
+        //Print "You have Won"
+        //Close game
+
+    //If player reaches an edge
+        //print "Cannot move through edge of maze"
+        //Do not move the player
+
+    //If player preses "M" or "m" key
+        //Convert to either upper or lower case
+        //Calls function to display map
+}
+
+//Function to validate maze
+    //Check if height and width are 5-100
+    //check if each "row" and "column" are same length
+    
+
+//Function to move player
+    //Updates map to move X piece either left, right, up or down
+    //
+
+//Function print maze to User
+    //
+
+
+
