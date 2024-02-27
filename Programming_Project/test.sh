@@ -157,6 +157,16 @@ else
     echo "Fail"
 fi
 
+echo -m "Testing when reach an edge = "
+# moves up to hit edge - faster testing
+echo "W" | timeout 0.2s ./maze edge_maze.txt > tmp
+if grep -q "Error: Cannot move through walls" tmp;
+then
+    echo "Pass"
+else
+    echo "Fail"
+fi
+
 echo -n "Testing Reaching E = "
 # moves right in test data maze to reach E - faster testing
 echo "D" | timeout 0.2s ./maze win_maze.txt > tmp
