@@ -19,7 +19,7 @@
         //if format correct, call "Validate Map Size" function
 
     //If statements to user inputs
-        //If not WASD or M/m print "Error: Invalid Input. Use WASD"
+        //If not WASD or M/m print "Error: Please use WASD for movement or M/m for map"
         //Movement for each key calls "Movement Function"
         //m or M calls "Map Function"
 }
@@ -28,7 +28,7 @@
 
     //Begin storing map inside 2D array
         //Check if either height or width are greater than 5
-            //If not print "Error: Maze is too small "
+            //If not print "Error: Maze is too small"
         //Check if either height or width are smaller than 100
             //If not print "Error: Maze is too big"
 
