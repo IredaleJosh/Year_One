@@ -1,48 +1,57 @@
-#include <stdio.h>
+//#include <stdio.h>
 
-struct Maze{
-    int height;
-    int width;
+//struct Maze{
+    //int height;
+    //int width;
 }
 
-int main(int argc, char *argv[]){
+//int main(int argc, char *argv[]){
+
     //Validation of arguements
         //print: "Usage: Coursework <mazefile>" when arguement count not correct
+
     //Get file from argv[1]
         //if file is NULL print: "Error: Incorrect filename"
 
-    //If statements to move player
-        //If not WASD print "Error: Invalid Input. Use WASD"
-        //Movement for each key, 
-    
-    //Check if player has hit the wall
-        //print "Cannot move through a wall"
-        //Do not move the player
+    //Validate the file is in correct format
+        //Check it contains S, E, " ", #
+        //If not print "Error: File not in the correct format"
+        //if format correct, call "Validate Map Size" function
 
-    //If player reaches E
-        //Print "You have Won"
-        //Close game
-
-    //If player reaches an edge
-        //print "Cannot move through edge of maze"
-        //Do not move the player
-
-    //If player preses "M" or "m" key
-        //Convert to either upper or lower case
-        //Calls function to display map
+    //If statements to user inputs
+        //If not WASD or M/m print "Error: Invalid Input. Use WASD"
+        //Movement for each key calls "Movement Function"
+        //m or M calls "Map Function"
 }
 
 //Function to validate maze
-    //Check if height and width are 5-100
+
+    //Begin storing map inside 2D array
+        //Check if either height or width are greater than 5
+            //If not print "Error: Maze is too small "
+        //Check if either height or width are smaller than 100
+            //If not print "Error: Maze is too big"
+
     //check if each "row" and "column" are same length
-    
+        //If not print "Error: File not in the correct format
+    //If no errors store map in 2D array that will 
+
 
 //Function to move player
-    //Updates map to move X piece either left, right, up or down
-    //
+
+    //Check if player hits a wall
+        //if true, print "Error: Cannot move through walls
+
+    //Check if player reaches edge
+        //if true print "Error: Cannot move outside the map"
+
+    //Check if player reaches "E"
+        //if true, print "You have won" and return 0
+
+    //If any other move, then valid
+        //Updates 2D array storing map to match corresponding movement
 
 //Function print maze to User
-    //
-
-
-
+    //get the stored map from the height and width variables
+    //print them in correct order to produce map
+    
