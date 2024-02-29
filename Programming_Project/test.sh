@@ -53,7 +53,7 @@ fi
 # means it's in the incorrect format
 # expected to tell the user its incorrect format 
 echo -n "File has incorrect format = "
-timeout 0.2s ./maze Data/bad_maze.txt > tmp
+timeout 0.2s ./maze Data/invalid_maze.txt > tmp
 if grep -q "Error: File not in the correct format" tmp;
 then
     echo "Pass"
@@ -65,7 +65,7 @@ fi
 # one side too small means error
 # expected to tell user maze is too small
 echo -n "Testing height or width less than 5 = "
-timeout 0.2s ./maze Data/two_smaller_maze.txt
+timeout 0.2s ./maze Data/small_maze.txt
 if grep -q "Error: Maze is too small" tmp;
 then
     echo "Pass"
@@ -77,7 +77,7 @@ fi
 # one side too big means error
 # expected to tell user maze is too large
 echo -n "Testing height or width greater than 100 = "
-timeout 0.2s ./maze Data/two_larger_maze.txt
+timeout 0.2s ./maze Data/large_maze.txt
 if grep -q "Error: Maze is too large" tmp;
 then
     echo "Pass"
@@ -158,8 +158,8 @@ fi
 # check map is printed when "M" pressed
 # expected to print first line of map
 echo -n "Testing "M" Input = "
-echo "M" | timeout 0.2s ./maze maze.txt > tmp
-if grep -q "## ## #" tmp;
+echo "M" | timeout 0.2s ./maze map_maze.txt > tmp
+if grep -q "##### ######" tmp;
 then
     echo "Pass"
 else
@@ -169,8 +169,8 @@ fi
 # can either be upper or lower case for map function
 # expected to output first line of map
 echo -n "Testing "m" Input = "
-echo "m" | timeout 0.2s ./maze maze.txt > tmp
-if grep -q "## ## #" tmp;
+echo "m" | timeout 0.2s ./maze map_maze.txt > tmp
+if grep -q "##### ######" tmp;
 then
     echo "Pass"
 else
@@ -195,7 +195,7 @@ fi
 # code checks if reached edge and tell user such
 # Expected to print error telling user they reached an edge
 echo -m "Testing when reach an edge = "
-echo "W" | timeout 0.2s ./maze edge_maze.txt > tmp
+echo "A" | timeout 0.2s ./maze edge_maze.txt > tmp
 if grep -q "Error: Cannot move outside the map" tmp;
 then
     echo "Pass"

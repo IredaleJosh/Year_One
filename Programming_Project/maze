@@ -1,8 +1,8 @@
 //#include <stdio.h>
 
 //struct Maze{
-    //int height;
-    //int width;
+    //2D array
+    //char user input
 }
 
 //int main(int argc, char *argv[]){
@@ -33,8 +33,8 @@
             //If not print "Error: Maze is too big"
 
     //check if each "row" and "column" are same length
-        //If not print "Error: File not in the correct format
-    //If no errors store map in 2D array that will 
+        //If not print "Error: File not in the correct format"
+    //If no errors store map in 2D array
 
 
 //Function to move player
@@ -52,6 +52,7 @@
         //Updates 2D array storing map to match corresponding movement
 
 //Function print maze to User
-    //get the stored map from the height and width variables
+
+    //get the stored map from 2D array and update the X position in it
     //print them in correct order to produce map
     
